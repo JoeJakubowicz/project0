@@ -12,7 +12,7 @@
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
-                margin-bottom: 5px;
+                
             }
           
             h4{
@@ -37,7 +37,29 @@
             #submit{
                 padding: 5px;
             }
-         
+            .video-container {
+                overflow: hidden;
+                position: relative;
+                width:100%;
+            }
+
+            .video-container::after {
+                padding-top: 56.25%;
+                display: block;
+                content: '';
+            }
+
+            .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            #BottomPic{
+                background-color: indianred
+            }
+
         </style>
     </head>
     <body>
@@ -75,9 +97,6 @@
             </h5>
             <div class=text-center>
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                    <label class="btn btn-secondary active">
-                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Vote:
-                    </label>
                     <label class="btn btn-secondary">
                         <input type="radio" name="benG" id="benG" autocomplete="off"> Ben Guzek
                     </label>
@@ -100,9 +119,12 @@
             </div>
         </div>
         <br>
-        
-        <iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/rdsEC0UjEKg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/rdsEC0UjEKg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div id="BottomPic">
         <img src= "DrPepperGuzek.jpg" class="center" width=50%>
+        </div>
         
 
         
